@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DocVault Privacy Policy</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:900px;margin:40px auto;padding:20px;line-height:1.7;color:#222}
+h1,h2{color:#0B63CE}
+code{background:#f3f3f3;padding:2px 4px}
+</style>
+</head>
+<body>
+<h1>Privacy Policy</h1>
+<p><strong>Effective Date:</strong> July 19, 2026</p>
+
+<p>DocVault ("the App") respects your privacy. This application is designed to work primarily offline and stores your documents on your device.</p>
+
+<h2>Information We Collect</h2>
+<ul>
+<li>Documents, images, screenshots, and PDFs that you choose to import or scan.</li>
+<li>OCR text generated from your documents to enable local search.</li>
+<li>App preferences such as theme and settings.</li>
+</ul>
+
+<h2>How Your Data Is Used</h2>
+<ul>
+<li>Organize and search your documents.</li>
+<li>Generate searchable text using on-device OCR.</li>
+<li>Improve your experience within the app.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>All imported documents, OCR results, and metadata are stored locally on your device. The app does not upload your files to our servers.</p>
+
+<h2>Permissions</h2>
+<ul>
+<li><strong>Camera</strong> – Scan documents.</li>
+<li><strong>Photos/Storage</strong> – Import and manage documents.</li>
+<li><strong>Notifications (optional)</strong> – Document expiry reminders.</li>
+<li><strong>Biometric Authentication (optional)</strong> – Protect access to the app.</li>
+</ul>
+
+<h2>Data Sharing</h2>
+<p>We do not sell, rent, or share your personal documents or information with third parties. Documents are only shared when you explicitly use the Share or Export features.</p>
+
+<h2>Internet Connection</h2>
+<p>The core features work offline. If future versions include optional online features (such as cloud backup), they will require your explicit consent.</p>
+
+<h2>Security</h2>
+<p>We recommend protecting your device with a passcode. If enabled, the app can use your device's biometric authentication to restrict access.</p>
+
+<h2>Children's Privacy</h2>
+<p>The app is not directed toward children under 13. We do not knowingly collect personal information from children.</p>
+
+<h2>Your Choices</h2>
+<p>You may delete documents at any time. Uninstalling the app removes the application; locally stored data may also be removed depending on your device and platform.</p>
+
+<h2>Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. The latest version will always be available with the app.</p>
+
+<h2>Contact</h2>
+<p>Email: support@neukaps.com</p>
+
+<hr>
+<p>&copy; 2026 Neukaps. All rights reserved.</p>
+</body>
+</html>
