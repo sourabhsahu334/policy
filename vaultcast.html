@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vaultcast — Privacy Policy</title>
+    <meta name="description" content="Privacy policy for the Vaultcast Chrome extension — a screen recorder that saves to your own Google Drive." />
+    <style>
+      :root {
+        --bg: #0f1116;
+        --panel: #171a21;
+        --line: #2a2f3a;
+        --text: #e7e9ee;
+        --muted: #9aa2b1;
+        --accent: #6366f1;
+        --rec: #ef4444;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: 760px; margin: 0 auto; padding: 48px 22px 80px; }
+      header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+      .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--rec); box-shadow: 0 0 0 4px rgba(239,68,68,.2); }
+      h1 { font-size: 30px; margin: 20px 0 4px; letter-spacing: -.4px; }
+      .brand { font-size: 15px; font-weight: 700; }
+      .updated { color: var(--muted); font-size: 14px; margin-bottom: 32px; }
+      h2 { font-size: 19px; margin: 34px 0 10px; }
+      p, li { color: #d6d9e0; }
+      a { color: var(--accent); }
+      ul { padding-left: 22px; }
+      li { margin: 6px 0; }
+      .card {
+        background: var(--panel); border: 1px solid var(--line);
+        border-radius: 12px; padding: 16px 18px; margin: 18px 0;
+      }
+      strong { color: var(--text); }
+      code { background: #1e222b; border: 1px solid var(--line); border-radius: 5px; padding: 1px 6px; font-size: 13px; }
+      footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+      @media (prefers-color-scheme: light) {
+        :root { --bg: #ffffff; --panel: #f6f7fb; --line: #e4e7ef; --text: #1f2430; --muted: #5a6270; }
+        p, li { color: #333a48; }
+        code { background: #eef0f4; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header><span class="dot"></span><span class="brand">Vaultcast</span></header>
+      <h1>Privacy Policy</h1>
+      <div class="updated">Last updated: 26 July 2026</div>
+
+      <p>
+        Vaultcast is a Chrome extension that records your screen (a full display,
+        an application window, a browser tab, or a dragged region) and saves each
+        recording to <strong>your own Google Drive</strong>. This policy explains
+        exactly what data Vaultcast handles and what it does not.
+      </p>
+
+      <div class="card">
+        <strong>The short version:</strong> Your recordings go only to your own
+        Google Drive, or stay on your device if you choose “Local only.” Vaultcast
+        has no server of its own. We never receive, store, see, sell, or share your
+        recordings or any personal data. There is no analytics and no tracking.
+      </div>
+
+      <h2>What Vaultcast does with your data</h2>
+      <ul>
+        <li>
+          <strong>Screen recordings.</strong> When you record, the video is written
+          first to local storage on your device (IndexedDB) and, unless you choose
+          “Local only,” uploaded directly to <strong>your</strong> Google Drive using
+          Google’s Drive API. The developer of Vaultcast never receives a copy and has
+          no access to your recordings.
+        </li>
+        <li>
+          <strong>Google sign-in.</strong> To upload to your Drive, Vaultcast asks
+          Google for an access token via Chrome’s <code>identity</code> API. The token
+          is managed by Chrome and used only to talk to the Google Drive API on your
+          behalf. Vaultcast does not store your Google password or account details.
+        </li>
+        <li>
+          <strong>Settings.</strong> Your preferences (capture mode, microphone /
+          system-audio / quality options, and the id of the “Vaultcast Recordings”
+          folder created in your Drive) are saved locally with Chrome’s
+          <code>storage</code> API. They never leave your device.
+        </li>
+      </ul>
+
+      <h2>Google Drive access (drive.file scope)</h2>
+      <p>
+        Vaultcast requests only the <code>https://www.googleapis.com/auth/drive.file</code>
+        scope. This is a per-file scope: Vaultcast can only see and manage the files it
+        creates in your Drive. It <strong>cannot</strong> read, list, or access any other
+        files in your Google Drive.
+      </p>
+
+      <h2>Limited Use disclosure</h2>
+      <p>
+        Vaultcast’s use and transfer of information received from Google APIs will adhere
+        to the
+        <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use/" target="_blank" rel="noopener">Google API Services User Data Policy</a>,
+        including the Limited Use requirements. Data obtained from Google APIs is used
+        solely to provide the recording-to-Drive feature, is never transferred to the
+        developer or any third party, and is never used for advertising, tracking, or
+        creditworthiness purposes.
+      </p>
+
+      <h2>Data we do NOT collect</h2>
+      <p>
+        Vaultcast does not collect or transmit to the developer any personally
+        identifiable information, authentication credentials, financial information,
+        health information, personal communications, location, or browsing history.
+        It does not read the content of the web pages you visit. There is no analytics,
+        advertising, or third-party tracking of any kind.
+      </p>
+
+      <h2>Data sharing</h2>
+      <p>
+        We do not sell or transfer your data to third parties. Your recordings are sent
+        only to your own Google Drive, at your direction. Sharing a recording afterwards
+        is entirely under your control through Google Drive.
+      </p>
+
+      <h2>Data retention and deletion</h2>
+      <p>
+        Local copies of recordings are stored on your device until you delete them from
+        the Vaultcast dashboard or clear the extension’s data. Recordings uploaded to
+        your Google Drive remain there until you delete them in Google Drive. Because the
+        developer never holds your data, there is nothing for us to retain or delete on
+        our side.
+      </p>
+
+      <h2>Permissions</h2>
+      <p>
+        Vaultcast requests only the permissions needed to record your screen and upload
+        to your Drive: <code>offscreen</code>, <code>identity</code>, <code>storage</code>,
+        <code>desktopCapture</code>, <code>tabCapture</code>, <code>tabs</code>,
+        <code>scripting</code>, <code>activeTab</code>, <code>alarms</code>,
+        <code>downloads</code>, and host access to <code>https://www.googleapis.com/*</code>
+        for the Google Drive API. None of these are used to monitor your browsing.
+      </p>
+
+      <h2>Children</h2>
+      <p>
+        Vaultcast is a general-purpose tool and is not directed to children under 13.
+      </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        We may update this policy as the extension evolves. Material changes will be
+        reflected here with a new “Last updated” date.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about this policy? Email
+        <a href="mailto:neukapssoftwares@gmail.com">neukapssoftwares@gmail.com</a>.
+      </p>
+
+      <footer>© 2026 Vaultcast. This page describes the Vaultcast Chrome extension.</footer>
+    </div>
+  </body>
+</html>
