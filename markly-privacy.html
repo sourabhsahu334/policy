@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Markly — Privacy Policy</title>
+    <style>
+      :root { --bg:#fff; --text:#16181d; --muted:#5b6474; --line:#e4e7ec; --accent:#b45309; --sunk:#f6f7f9; }
+      @media (prefers-color-scheme: dark) {
+        :root { --bg:#101216; --text:#e8eaf0; --muted:#9aa2b1; --line:#2b303a; --accent:#fbbf24; --sunk:#191c22; }
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { background: var(--bg); color: var(--text); padding: 56px 20px 96px;
+        font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased; }
+      main { max-width: 680px; margin: 0 auto; }
+      .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 34px; }
+      .logo { width: 36px; height: 36px; border-radius: 10px; flex: none; position: relative;
+        background: linear-gradient(160deg, #262b36, #1a1e26); }
+      .logo i, .logo b { position: absolute; left: 50%; transform: translateX(-50%); border-radius: 2px; display: block; }
+      .logo i { background: #6b7280; height: 2px; }
+      .logo i:first-child { top: 10px; width: 18px; }
+      .logo i:last-of-type { bottom: 10px; width: 14px; }
+      .logo b { top: 16px; width: 26px; height: 4px; background: #f59e0b; }
+      h1 { font-size: 30px; font-weight: 800; letter-spacing: -0.02em; }
+      .sub { color: var(--muted); font-size: 15px; margin-top: 4px; }
+      h2 { font-size: 18px; font-weight: 700; margin: 34px 0 10px; }
+      p { margin-bottom: 14px; color: var(--text); }
+      ul { margin: 0 0 14px 22px; }
+      li { margin-bottom: 7px; }
+      .callout { background: var(--sunk); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0;
+        padding: 16px 18px; margin: 20px 0; }
+      .callout p:last-child { margin-bottom: 0; }
+      strong { font-weight: 650; }
+      footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line);
+        color: var(--muted); font-size: 14px; }
+      a { color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="brand">
+        <span class="logo" aria-hidden="true"><i></i><b></b><i></i></span>
+        <div>
+          <h1>Privacy Policy</h1>
+          <div class="sub">Markly — Highlight &amp; Save Any Page</div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>Markly collects nothing and sends nothing.</strong> It makes no network
+        requests of any kind. There is no account, no server, no analytics and no
+        tracking. Everything you highlight stays in your browser, on your computer.</p>
+      </div>
+
+      <h2>What Markly stores</h2>
+      <p>When you highlight something, Markly saves the following to your browser's
+      local storage (<code>chrome.storage.local</code>) on your own device:</p>
+      <ul>
+        <li>the text you highlighted, and a short piece of the text either side of it,
+          which is how the highlight is found again on your next visit</li>
+        <li>the colour and style you chose, and any note you attached</li>
+        <li>the address and title of the page, so the panel can list and reopen it</li>
+        <li>your settings, including any sites you have switched Markly off for</li>
+      </ul>
+
+      <h2>Where it goes</h2>
+      <p><strong>Nowhere.</strong> This data never leaves your device. Markly has no
+      backend, contacts no third parties, and includes no remotely hosted code,
+      advertising, or analytics libraries. It is not synced between your devices —
+      if you want your highlights elsewhere, you export them yourself.</p>
+
+      <h2>Reading page content</h2>
+      <p>To place a saved highlight back onto a page, Markly has to read that page's
+      text in your browser. This happens entirely inside the tab. Page content is
+      never transmitted, logged, or stored — apart from the specific passages you
+      choose to highlight.</p>
+
+      <h2>Your control</h2>
+      <ul>
+        <li>Delete any highlight from the page or the panel, with an undo.</li>
+        <li>Export everything as Markdown, or as a JSON backup you can restore later.</li>
+        <li>Delete every highlight at once in <em>Settings → Your data</em>.</li>
+        <li>Name any site in <em>Settings → Sites</em> and Markly will not run there.</li>
+        <li>Uninstalling Markly removes all of its stored data along with it.</li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>Markly is a general-purpose reading tool. It collects no personal information
+      from anyone, including children.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy ever changes, the updated version will be published here and
+      the date below will change. Markly's no-data-collection design is not
+      something we intend to revisit.</p>
+
+      <footer>
+        Last updated 28 July 2026 · Questions: <a href="mailto:sourabhsahu339@gmail.com">sourabhsahu339@gmail.com</a>
+      </footer>
+    </main>
+  </body>
+</html>
