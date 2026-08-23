@@ -51,59 +51,113 @@
             font-size: 0.9em;
             color: #888;
         }
+    
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.95em;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px 10px;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+            vertical-align: top;
+        }
+        th { font-weight: 600; }
     </style>
 </head>
 
 <body>
     <div class="container">
         <h1>Privacy Policy for Neukaps LinkedIn Auto Connect</h1>
-        <p class="last-updated">Last Updated: January 30, 2026</p>
+        <p class="last-updated">Last Updated: August 23, 2026</p>
 
         <p>Neukaps ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we
             handle information when you use the <strong>Neukaps LinkedIn Auto Connect</strong> Chrome extension.</p>
 
-        <h2>1. Information Collection and Use</h2>
-        <p>Our extension is designed with a "Privacy First" approach.</p>
+        <p>The extension has two distinct parts, and they handle data very differently. The <strong>automation
+            tools</strong> (Connect, Bulk Message, Email, Phone, Links) run entirely in your browser and send nothing
+            anywhere. The <strong>AI section</strong> is optional, requires you to sign in, and does send data to our
+            server; it is described in full in section 3.</p>
+
+        <h2>1. The automation tools</h2>
         <ul>
-            <li><strong>No Personal Data Collection:</strong> We do not collect, store, or transmit any personally
-                identifiable information (PII) such as your name, email address, password, or LinkedIn credentials.</li>
-            <li><strong>Local Processing:</strong> Any data required for the extension to function (such as detecting
-                "Connect" buttons on the page) is processed entirely within your local browser environment.</li>
-            <li><strong>User Activity & Website Content:</strong> The extension interacts with your active LinkedIn tab
-                to identify connection buttons and automate clicks. This information is used solely to perform the
-                automation you request and is never saved or sent to any external servers.</li>
+            <li><strong>No personal data collection:</strong> we do not collect, store, or transmit personally
+                identifiable information such as your name, password, or LinkedIn credentials.</li>
+            <li><strong>Local processing:</strong> everything these tools need &mdash; detecting "Connect" buttons,
+                reading the results on a search page &mdash; is processed entirely within your local browser.</li>
+            <li><strong>No transmission:</strong> results you scrape stay on your device until you choose to download
+                them as a TXT, JSON, or CSV file.</li>
         </ul>
 
-        <h2>2. Storage</h2>
-        <p>The extension uses the <code>chrome.storage.local</code> API exclusively to save your session preferences
-            (e.g., the number of connections you wish to send) and to track the progress of your current session. This
-            data remains on your physical device and is not synchronized across different browsers or shared with us.
-        </p>
+        <h2>2. Local storage</h2>
+        <p>The extension uses the <code>chrome.storage.local</code> API to save your preferences (theme, the number of
+            connections you want to send, whether the sidebar is open) and, once you sign in to the AI section, your
+            session tokens. This data stays on your device.</p>
 
-        <h2>2. Data Transmission</h2>
-        <p>Neukaps LinkedIn Auto Connect does <strong>not</strong> communicate with any external servers. There are no
-            background analytics, tracking scripts, or third-party APIs involved that could transmit your data.</p>
+        <h2>3. The AI section (optional)</h2>
+        <p>The AI section is off until you choose to use it. Nothing in this section happens unless you sign in.</p>
 
-        <h2>4. Third-Party Sharing</h2>
-        <p>Since we do not collect any data, we do not—and cannot—sell, trade, or otherwise transfer your data to
-            outside parties.</p>
+        <p><strong>What we receive when you use it:</strong></p>
+        <ul>
+            <li><strong>Your Google account email, name, and profile picture,</strong> when you sign in with Google. We
+                use these to identify your account and to count your remaining free notes. We do not receive your Google
+                password, and we request no access to Gmail, Drive, or any other Google service.</li>
+            <li><strong>Your own LinkedIn profile,</strong> once, when you ask us to analyse it. We read the public
+                content of the profile URL you provide &mdash; name, headline, location, About text, experience,
+                education, and skills &mdash; and send it to our AI provider to produce a summary. We store that summary
+                and the profile URL.</li>
+            <li><strong>The profile of each person you generate a note for.</strong> We read the same fields from the
+                profile URL you paste, send them to our AI provider, and store the person's name, headline, and profile
+                URL alongside the note we generated.</li>
+            <li><strong>The notes themselves,</strong> so you can find them again in the History tab and so the AI can
+                avoid repeating itself across the people you contact.</li>
+        </ul>
+
+        <p><strong>Who we share it with:</strong> the profile text and your summary are sent to <strong>Amazon Web
+            Services (Bedrock)</strong> to generate the text. AWS processes it to return a result. We do not sell,
+            trade, or transfer your data to anyone else, and we do not use it for advertising.</p>
+
+        <p><strong>Where it is stored:</strong> your sign-in identity is handled by <strong>Google Firebase
+            Authentication</strong>; your profile summary and generated notes are stored in a <strong>Supabase</strong>
+            (PostgreSQL) database. Both are projects we control. Access is restricted to our server; no other user of
+            the extension can read your data.</p>
+
+        <p><strong>Retention and deletion:</strong> you can delete any individual note from the History tab at any time.
+            To delete your account and everything associated with it, email us and we will remove it.</p>
+
+        <p><strong>What we never do:</strong> we do not read your LinkedIn messages, your connections list, your feed,
+            or any profile you have not explicitly given us the URL for. The extension never sends anything anywhere
+            while you are simply browsing LinkedIn.</p>
+
+        <h2>4. Third-party services</h2>
+        <table>
+            <tr><th>Service</th><th>Purpose</th><th>What it receives</th></tr>
+            <tr><td>Google Firebase Authentication</td><td>Sign-in</td><td>Your Google email, name, picture</td></tr>
+            <tr><td>Supabase (PostgreSQL)</td><td>Storage</td><td>Your profile summary, generated notes, quota</td></tr>
+            <tr><td>Amazon Web Services (Bedrock)</td><td>AI text generation</td><td>Profile text and your summary, at the moment you generate</td></tr>
+        </table>
 
         <h2>5. Security</h2>
-        <p>While we do not collect data, we ensure that the extension operates securely within the permissions granted
-            by the Chrome browser. We do not use remote code, ensuring all logic is transparent and local to your
-            machine.</p>
+        <p>Sign-in uses Google OAuth; we never see your Google password. Our server verifies your identity on every
+            request, and the database is configured so that no client &mdash; including the extension itself &mdash; can
+            read or write your records directly. We do not use remote code: all extension logic ships inside the
+            extension and is reviewable.</p>
 
-        <h2>6. Compliance with Chrome Web Store Policies</h2>
-        <p>This extension complies with the Chrome Web Store User Data Policy, including the Single Purpose and Limited
-            Use requirements.</p>
+        <h2>6. Compliance with Chrome Web Store policies</h2>
+        <p>This extension complies with the Chrome Web Store User Data Policy, including the Limited Use requirements.
+            Data collected by the AI section is used solely to provide the AI features you request. It is not used for
+            advertising, is not sold, and is not used to build profiles for any purpose other than generating the notes
+            you ask for.</p>
 
-        <h2>7. Changes to This Policy</h2>
-        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new
-            Privacy Policy on this page and updating the "Last Updated" date.</p>
+        <h2>7. Changes to this policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new
+            policy on this page and updating the "Last Updated" date.</p>
 
-        <h2>8. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at:<br>
-            [Your Email Address/Website Link]</p>
+        <h2>8. Contact us</h2>
+        <p>For questions, data deletion requests, or anything else:<br>
+            <a href="mailto:sourabhsahu339@gmail.com">sourabhsahu339@gmail.com</a></p>
 
         <footer>
             &copy; 2026 Neukaps. All rights reserved.
